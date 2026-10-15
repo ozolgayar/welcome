@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Добро пожаловать в ГЕРОФАРМ</title>
+    <link rel="stylesheet" href="css/styles.css?v=132">
+    <link rel="stylesheet" href="styles/tokens.css?v=1">
+    <link rel="stylesheet" href="styles/main.css?v=6">
+  </head>
+  <body>
+    <div class="reel" id="reel">
+    <main class="stage">
+      <img class="cover__logo" src="logo/logo.png" alt="25 ГЕРОФАРМ">
+      <section class="cover" aria-labelledby="cover-title">
+        <div class="cover__bg" aria-hidden="true">
+          <svg class="cover__wave" viewBox="0 0 1440 810" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="fold-light" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#efe4ff" stop-opacity="0.32"></stop>
+                <stop offset="46%" stop-color="#b894ee" stop-opacity="0.14"></stop>
+                <stop offset="100%" stop-color="#5a2ca8" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient id="fold-mid" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ddc8ff" stop-opacity="0.2"></stop>
+                <stop offset="55%" stop-color="#7d4ad4" stop-opacity="0.06"></stop>
+                <stop offset="100%" stop-color="#241050" stop-opacity="0"></stop>
+              </linearGradient>
+              <linearGradient id="fold-glint" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0"></stop>
+                <stop offset="48%" stop-color="#fff8ff" stop-opacity="0.16"></stop>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+              </linearGradient>
+              <filter id="silk" x="-15%" y="-15%" width="130%" height="130%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="4" result="noise">
+                  <animate attributeName="baseFrequency" dur="16s" values="0.007 0.018;0.012 0.028;0.007 0.018" repeatCount="indefinite"></animate>
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" result="displaced"></feDisplacementMap>
+                <feGaussianBlur in="displaced" stdDeviation="10"></feGaussianBlur>
+              </filter>
+            </defs>
+            <g filter="url(#silk)">
+              <path fill="#3a1878" opacity="0.28" d="M-120 20C160 180 420-40 760 100C1100 240 1280 20 1600 140L1600 280C1220 160 980 340 620 220C220 90-80 220-120 140Z"></path>
+              <path fill="url(#fold-light)" d="M520 40C760 160 980 10 1240 110C1460 190 1580 70 1680 120L1660 210C1420 150 1140 260 860 140C680 60 560 120 520 100Z"></path>
+              <path fill="#2a1464" opacity="0.22" d="M-80 620C260 500 540 740 900 640C1240 540 1400 760 1640 660L1640 860C1280 980 940 760 600 880C240 1020-40 820-80 720Z"></path>
+              <path fill="url(#fold-mid)" d="M700 560C940 460 1160 680 1400 560C1540 490 1620 640 1700 580L1660 700C1460 820 1180 640 960 740C820 800 720 680 700 640Z"></path>
+              <path fill="none" stroke="url(#fold-glint)" stroke-width="5" stroke-linecap="round" d="M640 90C860 10 1080 170 1320 80C1500 10 1600 140 1700 70"></path>
+            </g>
+          </svg>
+        </div>
+
+        <img class="glass glass--down-left" src="img/down_left.png" alt="" width="1851" height="1919">
+        <img class="glass glass--up-right" src="img/up_right.png" alt="" width="1251" height="818">
+        <img class="glass glass--down-right" src="img/down_right.png" alt="" width="915" height="1234">
+
+        <div class="cover__content">
+          <p class="cover__badge">Курс</p>
+          <h1 id="cover-title" class="cover__title"><span class="cover__title-line">Добро пожаловать</span><br><span class="cover__title-line">в ГЕР<span class="cover__title-o"><img class="cover__title-heart" src="img/strast.png" alt="О" width="40" height="41"></span>ФАРМ</span></h1>
+          <p class="cover__subtitle">Знакомство с компанией</p>
+      <div class="cover__scene">
+      <div class="doodle doodle--brain">
+        <div class="coin coin--brain">
+          <div class="coin__shadow" aria-hidden="true"></div>
+          <div class="coin__body" data-rotate-x="16" data-rotate-y="62" data-rotate-z="10" style="transform: rotateZ(10deg) rotateY(62deg) rotateX(16deg)">
+            <div class="coin__face">
+              <img src="img/amb_5.svg" alt="" width="5803" height="5786">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doodle doodle--hand">
+        <div class="coin coin--hand">
+          <div class="coin__shadow" aria-hidden="true"></div>
+          <div class="coin__body" data-rotate-x="8" data-rotate-y="-34" data-rotate-z="-4" style="transform: rotateZ(-4deg) rotateY(-34deg) rotateX(8deg)">
+            <div class="coin__face">
+              <img src="img/otv_4.svg" alt="" width="5696" height="5227">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doodle doodle--heart">
+        <div class="coin coin--seal">
+          <div class="coin__shadow" aria-hidden="true"></div>
+          <div class="coin__body" data-rotate-x="0" data-rotate-y="16" data-rotate-z="0" style="transform: rotateZ(0deg) rotateY(16deg) rotateX(0deg)">
+            <div class="coin__face">
+              <img src="img/strast_5.svg" alt="" width="4542" height="3590">
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="cover__mascot" aria-hidden="true">
+          <div class="mascot-shadow" aria-hidden="true"></div>
+          <img class="cover__mascot-image" src="img/mascote.png" alt="" width="689" height="720">
+        </div>
+      </div>
+          <button class="cover__cta" id="cover-start" type="button">
+            <span class="cover__cta-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </span>
+            <span class="cover__cta-label">Начать</span>
+          </button>
+        </div>
+        <p class="cover__hint">
+          <svg class="cover__hint-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M20 12a8 8 0 0 1-13.7 5.6M4 12a8 8 0 0 1 13.7-5.6"></path>
+            <path fill="currentColor" d="M16.2 4.2 19.2 6.6 16.4 8.4zM7.8 19.8 4.8 17.4 7.6 15.6z"></path>
+          </svg>
+          Потяните значок, чтобы повернуть
+        </p>
+      </section>
+    </main>
+    <section class="buddy welcome" id="screen-buddy">
+      <div class="mesh" aria-hidden="true">
+        <span class="mesh__blob mesh__blob--lilac"></span>
+        <span class="mesh__blob mesh__blob--sun"></span>
+        <span class="mesh__blob mesh__blob--sky"></span>
+      </div>
+      <div class="buddy__glasses" aria-hidden="true">
+        <div class="buddy__glass-slot buddy__glass-slot--down-left"></div>
+        <div class="buddy__glass-slot buddy__glass-slot--up-right"></div>
+        <div class="buddy__glass-slot buddy__glass-slot--down-right"></div>
+      </div>
+      <div class="buddy__coins" aria-hidden="true">
+        <div class="buddy__slot buddy__slot--heart"></div>
+        <div class="buddy__slot buddy__slot--hand"></div>
+        <div class="buddy__slot buddy__slot--brain"></div>
+      </div>
+      <div class="welcome__hero">
+        <img class="welcome__logo" src="img/symbol.png" alt="" width="363" height="287">
+        <h1 class="welcome__title">Добро пожаловать<br>в ГЕРОФАРМ</h1>
+        <p class="welcome__hint" hidden>
+          <img class="welcome__hint-mouse" src="icons/mouse.svg" alt="" width="24" height="24">
+          <svg class="welcome__hint-finger" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 19V6M7 10l5-5 5 5"/>
+          </svg>
+          <span class="welcome__hint-hover">Крути колесико мыши вниз или вверх, чтобы перемещаться по курсу — это возможно на всех экранах курса, кроме раздела «Содержание курса».</span>
+          <span class="welcome__hint-touch">Свайпни вверх, чтобы двигаться по курсу</span>
+        </p>
+      </div>
+      <button class="buddy__avatar welcome__avatar" type="button" aria-expanded="false" aria-controls="buddy-chat">
+        <img src="img/avatar.png?v=2" alt="Поджик, маскот ГЕРОФАРМ" width="552" height="552">
+        <span class="welcome__badge" aria-hidden="true"></span>
+      </button>
+      <p class="buddy__bubble welcome__hello" hidden>Привет, я Поджик! 👋<br>Нажми на меня</p>
+      <button class="welcome__backdrop" type="button" aria-label="Закрыть чат" hidden></button>
+      <div class="buddy__chat welcome__chat" id="buddy-chat" role="dialog" aria-labelledby="buddy-chat-title" aria-modal="false" hidden>
+        <div class="welcome__handle" aria-hidden="true"></div>
+        <header class="buddy__chat-head welcome__chat-head">
+          <span class="buddy__face buddy__chat-avatar welcome__chat-avatar"></span>
+          <div class="buddy__chat-id">
+            <p class="buddy__chat-name" id="buddy-chat-title">Поджик</p>
+            <p class="buddy__chat-role">Маскот ГЕРОФАРМ</p>
+          </div>
+          <button class="buddy__chat-close welcome__close" type="button" aria-label="Закрыть чат">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"></path>
+            </svg>
+          </button>
+        </header>
+        <div class="buddy__log welcome__log" tabindex="0"></div>
+        <div class="buddy__prompts welcome__prompts">
+          <button class="buddy__prompt welcome__chip" type="button" data-reply="about">О чём этот курс</button>
+          <button class="buddy__prompt welcome__chip" type="button" data-reply="finish">Условия завершения</button>
+        </div>
+      </div>
+    </section>
+    </div>
+    <section class="journey toc" id="screen-next" hidden aria-labelledby="toc-title">
+      <h1 class="toc__title" id="toc-title">Содержание курса</h1>
+      <p class="toc__hint" id="toc-hint">Выбери модуль</p>
+      <div class="toc__grid">
+        <a class="toc__card toc__card--01 is-current" href="#module-01" data-state="progress">
+          <span class="toc__copy">
+            <span class="toc__index">01</span>
+            <span class="toc__name">О ГЕРОФАРМ</span>
+            <span class="toc__place">Вы здесь</span>
+            <span class="toc__status">0 из 5 уроков</span>
+          </span>
+          <span class="toc__go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"></path></svg>
+          </span>
+          <img class="toc__photo" src="img/soder_1.jpg?v=4" alt="" width="720" height="811">
+        </a>
+        <a class="toc__card toc__card--02" href="#module-02" data-state="locked" aria-label="02 Портфель ГЕРОФАРМ, модуль закрыт">
+          <span class="toc__copy">
+            <span class="toc__index">02</span>
+            <span class="toc__name">Портфель ГЕРОФАРМ</span>
+            <span class="toc__status"><svg class="toc__lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>Закрыто</span>
+          </span>
+          <span class="toc__go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"></path></svg>
+          </span>
+        </a>
+        <a class="toc__card toc__card--03" href="#module-03" data-state="locked" aria-label="03 Корпоративная культура, модуль закрыт">
+          <span class="toc__copy">
+            <span class="toc__index">03</span>
+            <span class="toc__name">Корпоративная культура</span>
+            <span class="toc__status"><svg class="toc__lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>Закрыто</span>
+          </span>
+          <img class="toc__heart" src="img/sofer_2.png" alt="" width="1089" height="1079">
+          <span class="toc__go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"></path></svg>
+          </span>
+        </a>
+        <a class="toc__card toc__card--04" href="#module-04" data-state="locked" aria-label="04 Площадки ГЕРОФАРМ, модуль закрыт">
+          <span class="toc__copy">
+            <span class="toc__index">04</span>
+            <span class="toc__name">Площадки ГЕРОФАРМ</span>
+            <span class="toc__status"><svg class="toc__lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>Закрыто</span>
+          </span>
+          <span class="toc__go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"></path></svg>
+          </span>
+        </a>
+        <a class="toc__card toc__card--05" href="#module-05" data-state="locked" aria-label="05 Полезная информация, модуль закрыт">
+          <img class="toc__deco" src="img/sofer_3.png" alt="" width="1214" height="1194">
+          <span class="toc__copy">
+            <span class="toc__index">05</span>
+            <span class="toc__name">Полезная информация</span>
+            <span class="toc__status"><svg class="toc__lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>Закрыто</span>
+          </span>
+          <span class="toc__go" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"></path></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="lesson" id="screen-module" hidden aria-labelledby="lesson-title">
+      <canvas class="bg-canvas" aria-hidden="true"></canvas>
+      <div class="lesson__aside">
+        <span class="lesson__aside-line" aria-hidden="true"></span>
+        <p class="lesson__aside-name" aria-label="Модуль 1"><span>М</span><span>О</span><span>Д</span><span>У</span><span>Л</span><span>Ь</span><span>1</span></p>
+      </div>
+      <div class="lesson__veil" aria-hidden="true"></div>
+      <div class="lesson__stage">
+        <img class="lesson__mark" src="img/symbol.png" alt="" width="363" height="287">
+        <h1 class="lesson__title" id="lesson-title">О ГЕРОФАРМ</h1>
+        <span class="lesson__rule" aria-hidden="true"></span>
+        <div class="lesson__copy">
+          <p>История. Миссия. Представленность препаратов. Производство. Социальные проекты.</p>
+        </div>
+        <p class="lesson__hint">
+          <img src="icons/mouse.svg" alt="" width="24" height="24">
+          <span>Крути колесико мыши</span>
+        </p>
+      </div>
+    </section>
+    <section class="player" id="screen-film" hidden>
+      <video class="player__video" src="video/about.mp4" playsinline preload="metadata"></video>
+      <div class="lesson__veil" aria-hidden="true"></div>
+    </section>
+    <nav class="steps" id="module-steps" hidden aria-label="Разделы модуля 1">
+      <ol class="steps__list">
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">1</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">Миссия ГЕРОФАРМ</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">2</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">История ГЕРОФАРМ</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">3</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">Показатели ГЕРОФАРМ</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">4</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">Карта экспорта</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">5</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">Цикл производства</span>
+        </li>
+        <li class="steps__item">
+          <span class="steps__mark" tabindex="0">
+            <span class="steps__num">6</span>
+            <svg class="steps__check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17.5 19 7.5"></path></svg>
+          </span>
+          <span class="steps__name">ГЕРОФАРМ 360</span>
+        </li>
+      </ol>
+    </nav>
+    <section class="sheet" id="screen-after" hidden aria-labelledby="sheet-title">
+      <img class="sheet__photo" src="img/01.jpg" alt="">
+      <div class="sheet__beams" aria-hidden="true">
+        <span class="sheet__beam" style="--w: 16px; --i: 0"></span>
+        <span class="sheet__beam" style="--w: 54px; --i: 1"></span>
+        <span class="sheet__beam" style="--w: 12px; --i: 2"></span>
+        <span class="sheet__beam" style="--w: 86px; --i: 3"></span>
+        <span class="sheet__beam" style="--w: 22px; --i: 4"></span>
+        <span class="sheet__beam" style="--w: 64px; --i: 5"></span>
+        <span class="sheet__beam" style="--w: 18px; --i: 6"></span>
+      </div>
+      <div class="sheet__card">
+        <h1 class="sheet__title" id="sheet-title">ГЕРОФАРМ — национальный производитель биотехнологических препаратов, обеспечивающий лекарственную безопасность России</h1>
+        <p class="sheet__text">Более 20 лет компания разрабатывает и производит жизненно важные лекарства и является надежным партнером государства в лечении социально значимых заболеваний</p>
+      </div>
+    </section>
+    <section class="facts" id="screen-facts" hidden aria-label="6 фактов о ГЕРОФАРМ">
+      <img class="facts__photo" src="img/01.jpg" alt="">
+      <div class="facts__glass"></div>
+      <div class="facts__stage">
+        <p class="facts__hub">6 фактов о ГЕРОФАРМ</p>
+        <div class="facts__orbit">
+          <div class="facts__arm" style="--a: -90deg"><button class="facts__node" type="button" data-fact="1">1</button></div>
+          <div class="facts__arm" style="--a: -30deg"><button class="facts__node" type="button" data-fact="3">3</button></div>
+          <div class="facts__arm" style="--a: 30deg"><button class="facts__node" type="button" data-fact="5">5</button></div>
+          <div class="facts__arm" style="--a: 90deg"><button class="facts__node facts__node--wide" type="button" data-fact="25">&gt;25</button></div>
+          <div class="facts__arm" style="--a: 150deg"><button class="facts__node facts__node--wide" type="button" data-fact="1600">&gt;1600</button></div>
+          <div class="facts__arm" style="--a: 210deg"><button class="facts__node" type="button" data-fact="14">14</button></div>
+        </div>
+        <p class="facts__hint">Нажми на цифру, чтобы узнать подробности</p>
+        <article class="facts__card" hidden>
+          <h2 class="facts__card-title"></h2>
+          <div class="facts__card-copy"></div>
+        </article>
+      </div>
+    </section>
+    <div class="player__scrim" id="film-scrim" hidden></div>
+    <div class="player__gate" hidden>
+      <div class="player__card" role="dialog" aria-modal="true" aria-labelledby="film-note-title">
+        <img class="player__card-icon" src="icons/headphones.svg" alt="" width="56" height="56">
+        <h2 class="player__card-title" id="film-note-title">Дальше видео<br>со звуком</h2>
+        <p class="player__card-text">Тебе могут понадобиться наушники</p>
+        <button class="player__card-go" type="button">Смотреть</button>
+      </div>
+    </div>
+    <div class="player__bar" hidden>
+      <button class="player__btn player__btn--play" type="button" aria-label="Воспроизвести">
+        <svg class="player__icon player__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5-11-6.5z"></path></svg>
+        <svg class="player__icon player__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7V5zm6.5 0H17v14h-3.5V5z"></path></svg>
+      </button>
+      <div class="player__sound">
+        <button class="player__btn player__btn--sound" type="button" aria-label="Выключить звук">
+          <svg class="player__icon player__icon--on" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4h3l5 4V6L7 10H4zm11.5-3.5a6 6 0 0 1 0 11M18 4a9.5 9.5 0 0 1 0 16"></path></svg>
+          <svg class="player__icon player__icon--off" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 10v4h3l5 4V6L7 10H4zm12 2 4 4m0-4-4 4"></path></svg>
+        </button>
+        <input class="player__range" type="range" min="0" max="1" step="0.05" value="1" aria-label="Уровень громкости">
+      </div>
+      <button class="player__next" type="button">Далее</button>
+    </div>
+    <script src="js/cover.js?v=23"></script>
+    <script src="js/buddy.js?v=28"></script>
+    <script src="js/facts.js?v=6"></script>
+    <script src="js/lesson-bg.js?v=8"></script>
+    <script src="js/player.js?v=5"></script>
+    <script src="scripts/chat.js?v=4"></script>
+  </body>
+</html>

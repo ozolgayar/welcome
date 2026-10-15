@@ -1,0 +1,345 @@
+/* Приветственный экран. База — мобильная, карточка чата с 1024px. */
+
+.welcome {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.welcome__hero {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 0;
+  padding: var(--space);
+  text-align: center;
+}
+
+.welcome__logo {
+  width: min(132px, 22vw);
+  height: auto;
+  margin-bottom: clamp(28px, 5vh, 48px);
+  transform-origin: 50% 60%;
+  animation: mark-sway 3.6s ease-in-out infinite;
+}
+
+.welcome__title {
+  max-width: 14em;
+  margin: 0;
+  font-family: "TT Commons Pro Expanded", "TT Commons Pro", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4.2vw, 3.3rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #9aa3ae 0%, #d5d9e0 46%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome__hint[hidden] {
+  display: none !important;
+}
+
+.welcome__hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--space) * 0.35);
+  max-width: 42em;
+  margin: calc(var(--space) * 0.8) 0 0;
+  color: #fff;
+  font-family: "TT Commons Pro", sans-serif;
+  font-weight: 450;
+  font-size: var(--fs-body);
+  line-height: 1.35;
+}
+
+.welcome__hint-mouse,
+.welcome__hint-finger {
+  width: 28px;
+  height: 28px;
+}
+
+.welcome__hint-finger {
+  display: none;
+  animation: welcome-nudge 1.6s ease-in-out infinite;
+}
+
+.welcome__hint-touch {
+  display: none;
+}
+
+@keyframes welcome-nudge {
+  0%,
+  100% { transform: translateY(4px); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Мышь — только там, где есть наведение. Иначе свайп. */
+@media (hover: none) {
+  .welcome__hint-mouse,
+  .welcome__hint-hover {
+    display: none;
+  }
+
+  .welcome__hint-finger {
+    display: block;
+  }
+
+  .welcome__hint-touch {
+    display: block;
+  }
+}
+
+.welcome__avatar {
+  /* absolute, а не fixed: экран лежит в ленте, иначе аватар всплывёт на обложке */
+  position: absolute;
+  z-index: 4;
+  left: var(--space);
+  bottom: calc(var(--space) + env(safe-area-inset-bottom));
+  width: var(--size-avatar);
+  height: var(--size-avatar);
+  min-width: var(--hit);
+  min-height: var(--hit);
+  animation: welcome-pulse 5s ease-in-out infinite;
+}
+
+.welcome.is-chat .welcome__avatar {
+  visibility: hidden;
+}
+
+.welcome__badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #ff4729;
+}
+
+.welcome.is-read .welcome__badge {
+  display: none;
+}
+
+@keyframes welcome-pulse {
+  0%,
+  72%,
+  100% { transform: scale(1); }
+  82% { transform: scale(1.08); }
+}
+
+.welcome__hello {
+  position: absolute;
+  z-index: 4;
+  left: calc(var(--space) + var(--size-avatar) + 12px);
+  bottom: calc(var(--space) + env(safe-area-inset-bottom) + 8px);
+  max-width: 16em;
+  margin: 0;
+}
+
+.welcome__backdrop {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgba(24, 8, 48, 0.45);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.welcome__backdrop[hidden] {
+  display: none !important;
+}
+
+/* Мобильный чат — нижняя шторка */
+.welcome .welcome__chat {
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 88vh;
+  height: 88dvh;
+  border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+  background: rgba(255, 255, 255, 0.96);
+  color: #241b33;
+  box-shadow: 0 -16px 40px rgba(24, 8, 48, 0.28);
+  transform: translateY(110%);
+  transition: transform var(--dur-chat) var(--ease-chat);
+}
+
+.welcome.is-chat .welcome__chat {
+  transform: translateY(0);
+}
+
+.welcome__chat[hidden] {
+  display: none !important;
+}
+
+.welcome__handle {
+  width: 42px;
+  height: 5px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: rgba(36, 27, 51, 0.2);
+  touch-action: none;
+}
+
+.welcome__chat-head {
+  min-height: var(--hit);
+}
+
+.welcome__close {
+  width: var(--hit);
+  height: var(--hit);
+  min-width: var(--hit);
+  min-height: var(--hit);
+}
+
+.welcome__log {
+  flex: 1;
+  min-height: 0;
+}
+
+.welcome__prompts {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.welcome__prompts::-webkit-scrollbar {
+  display: none;
+}
+
+.welcome__chip {
+  flex: 0 0 auto;
+  min-height: var(--hit);
+}
+
+.welcome__typing {
+  display: flex;
+  gap: 5px;
+  padding: 14px 16px;
+}
+
+.welcome__typing span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8a7aa0;
+  animation: welcome-dot 0.9s ease-in-out infinite;
+}
+
+.welcome__typing span:nth-child(2) { animation-delay: 0.15s; }
+.welcome__typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes welcome-dot {
+  0%,
+  80%,
+  100% { opacity: 0.3; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+
+.buddy__msg-hint {
+  display: block;
+  margin-top: 1.45em;
+  color: var(--color-hint-muted);
+}
+
+.buddy__msg-hint--touch {
+  display: none;
+}
+
+@media (hover: none) {
+  .buddy__msg-hint--hover {
+    display: none;
+  }
+
+  .buddy__msg-hint--touch {
+    display: block;
+  }
+}
+
+/* Единственный брейкпоинт ширины: режим чата */
+@media (min-width: 1024px) {
+  .welcome__backdrop {
+    display: none !important;
+  }
+
+  .welcome__handle {
+    display: none;
+  }
+
+  .welcome .welcome__chat,
+  .welcome.is-chat .welcome__chat {
+    position: absolute;
+    top: auto;
+    left: max(28px, env(safe-area-inset-left));
+    right: auto;
+    bottom: max(28px, env(safe-area-inset-bottom));
+    width: min(400px, calc(100% - 56px));
+    height: min(520px, calc(100% - 56px));
+    transform: none;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(36, 18, 72, 0.2);
+  }
+}
+
+/* Телефон горизонтально: панель справа */
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 1023px) {
+  .welcome__backdrop {
+    display: block !important;
+  }
+
+  .welcome__handle {
+    display: none;
+  }
+
+  .welcome .welcome__chat {
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    height: 100dvh;
+    border-radius: 0;
+    transform: translateX(110%);
+  }
+
+  .welcome.is-chat .welcome__chat {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome .buddy__slot--heart,
+  .welcome .buddy__slot--hand,
+  .welcome .buddy__slot--brain,
+  .welcome__avatar,
+  .welcome__hint-finger,
+  .welcome__typing span {
+    animation: none;
+  }
+
+  .welcome .welcome__chat {
+    transition: none;
+  }
+}

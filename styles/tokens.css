@@ -1,0 +1,19 @@
+:root {
+  /* Линейная интерполяция 360px → 1440px */
+  --fs-title: clamp(28px, 13.3px + 4.07vw, 72px);
+  --fs-body: clamp(14px, 13.3px + 0.19vw, 16px);
+  --size-logo: clamp(72px, 52.7px + 5.37vw, 130px);
+  --size-object: clamp(90px, 60px + 8.33vw, 180px);
+  --space: clamp(16px, 8px + 2.22vw, 40px);
+  --chat-width: clamp(320px, 26vw, 400px);
+  --float: clamp(4px, 3.33px + 0.185vw, 6px);
+  --size-avatar: 60px;
+  --hit: 44px;
+  --radius-sheet: 24px;
+  --dur-chat: 320ms;
+  --ease-chat: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --color-lilac: #c9a6ff;
+  --color-deep: #2a1060;
+  --color-hint-muted: #7f7f7f;
+  --chrome: linear-gradient(105deg, #3f4854 0%, #8d97a3 34%, #f7f8fa 68%, #ffffff 100%);
+}
